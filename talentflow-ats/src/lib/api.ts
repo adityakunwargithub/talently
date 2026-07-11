@@ -9,10 +9,11 @@ const ROLE_KEY = 'talently_auth_role';
 const API_PORT = 5000;
 
 /**
- * On native, "localhost" resolves to the device itself, not the dev machine —
- * so a hardcoded localhost fallback would silently fail on a physical device or
- * emulator. Derive the dev machine's LAN IP from the Expo dev server's host
- * (available while running via `expo start`) instead.
+ * Resolve API URL based on environment:
+ * - EXPO_PUBLIC_API_URL env var takes precedence (set in Vercel, .env.local, etc.)
+ * - For native apps, derive from Expo dev server host
+ * - For web development, use localhost:5000
+ * - For web production (Vercel), requires EXPO_PUBLIC_API_URL to be set
  */
 function resolveApiUrl(): string {
   if (process.env.EXPO_PUBLIC_API_URL) return process.env.EXPO_PUBLIC_API_URL;
@@ -23,7 +24,14 @@ function resolveApiUrl(): string {
     if (host) return `http://${host}:${API_PORT}/api`;
   }
 
-  return `http://localhost:${API_PORT}/api`;
+  // For web: only use localhost in development
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    return `http://localhost:${API_PORT}/api`;
+  }
+
+  // Production fallback - should have EXPO_PUBLIC_API_URL set
+  console.warn('API_URL not configured. Set EXPO_PUBLIC_API_URL environment variable.');
+  return '';
 }
 
 const API_URL = resolveApiUrl();

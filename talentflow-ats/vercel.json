@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "env": {
+    "EXPO_PUBLIC_API_URL": "@api_url"
+  },
+  "envPrefix": "EXPO_",
+  "installCommand": "npm install",
+  "regions": ["iad1"]
+}
