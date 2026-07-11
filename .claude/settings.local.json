@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-expo-app@latest talentflow-ats --yes)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s http://localhost:8081/careers --max-time 15 -o /dev/null -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(npx expo *)",
+      "Bash(npx prisma *)",
+      "Bash(npm run *)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\talentflow-ats\\\\src\\\\app\\\\admin\\\\users\\\\[type]\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/admin-login -H \"Content-Type: application/json\" -d '{\"username\":\"admin\",\"password\":\"Admin@12345\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/public/jobs/cmrb6n3fn000164uajdv7ps11/apply -H \"Content-Type: application/json\" -d '{\"name\":\"Delete Me Test\",\"email\":\"deleteme@example.com\"}')",
+      "Bash(git init *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git add *)",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/candidate-login -H \"Content-Type: application/json\" -d '{\"username\":\"candidate\",\"password\":\"password\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d '{\"identifier\":\"recruiter\",\"password\":\"password\"}')",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/admin-login -H \"Content-Type: application/json\" -d '{\"username\":\"admin\",\"password\":\"admin\"}')",
+      "Bash(curl -s http://localhost:4000/health --max-time 3 -o /dev/null -w \"backend: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:8081 --max-time 3 -o /dev/null -w \"frontend: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:8081/ --max-time 15 -o /dev/null -w \"frontend: %{http_code}\\\\n\")",
+      "Bash(npm install *)",
+      "Bash(pandoc -t markdown \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\Keys.docx\")",
+      "PowerShell(Add-Type -AssemblyName System.IO.Compression; $zip = [System.IO.Compression.ZipFile]::OpenRead\\(\"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\Keys.docx\"\\); $entry = $zip.Entries | Where-Object { $_.Name -eq \"document.xml\" }; [System.IO.StreamReader]$reader = New-Object System.IO.StreamReader\\($entry.Open\\(\\)\\); $reader.ReadToEnd\\(\\))",
+      "Bash(cd /tmp)",
+      "Bash(unzip -q \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\Keys.docx\" -d keys_extracted)",
+      "Bash(unzip -q \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\ATS.docx\" -d ats_extracted)",
+      "Bash(unzip -q \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\ATS.docx\" -d ats_spec)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\adity\\\\OneDrive\\\\Documents\\\\ATS\\\\.claude\")",
+      "Bash(git config *)",
+      "Bash(git rm *)",
+      "Bash(rm -rf backend/.git talentflow-ats/.git)"
+    ]
+  }
+}
