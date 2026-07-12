@@ -71,7 +71,7 @@ function LoginTile({
 export default function LandingScreen() {
   const router = useRouter();
   const { width } = useWindowDimensions();
-  const stackedTiles = width < 560;
+  const stackedTiles = width < 800;
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContent}>
