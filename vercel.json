@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd talentflow-ats && npm run build",
+  "outputDirectory": "talentflow-ats/dist",
+  "installCommand": "cd talentflow-ats && npm install",
+  "regions": ["iad1"]
+}
