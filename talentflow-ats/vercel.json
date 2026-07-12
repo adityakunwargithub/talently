@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/.expo/static",
   "env": {
-    "EXPO_PUBLIC_API_URL": "@api_url"
+    "EXPO_PUBLIC_API_URL": "https://talentlybackend-production.up.railway.app/api"
   },
   "envPrefix": "EXPO_",
   "installCommand": "npm install",
