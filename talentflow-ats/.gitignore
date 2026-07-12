@@ -5,9 +5,9 @@ node_modules/
 
 # Expo
 .expo/
-dist/
 web-build/
 expo-env.d.ts
+# NOTE: dist/ is NOT ignored - committed for Vercel deployment
 
 # Native
 .kotlin/

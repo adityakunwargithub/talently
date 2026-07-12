@@ -1,14 +1,4 @@
 {
-  "framework": null,
-  "buildCommand": "bash build.sh",
-  "outputDirectory": "dist",
-  "installCommand": "",
-  "env": {
-    "EXPO_PUBLIC_API_URL": "https://talentlybackend-production.up.railway.app/api"
-  },
-  "envPrefix": "EXPO_",
-  "regions": ["iad1"],
-  "public": false,
   "rewrites": [
     {
       "source": "/(.*)",
