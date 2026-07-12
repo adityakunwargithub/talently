@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/.expo/static",
+  "outputDirectory": "dist",
   "env": {
     "EXPO_PUBLIC_API_URL": "https://talentlybackend-production.up.railway.app/api"
   },
